@@ -10,13 +10,18 @@ var sketch = function (a){
     
     canvas1 = a.createCanvas(windowWidth,windowHeight) ;
    registerServiceWorker('service-worker.js')
-  
+   button1=a.createButton('start')
+    button1.position (300,10)
+    button1.mouseClicked (empezar)
+    
   mic = new p5.AudioIn();
-  mic.start();
   amp = new p5.Amplitude();
   amp.setInput(mic);
   a.background(0);
 }
+   empezar =function (){
+    mic.start ()
+  }
 
  a.draw = function () {
   
