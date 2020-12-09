@@ -1,7 +1,7 @@
 // this is the display sketch it will not work without opening the controller sketch!
 
 //set up a place to relay the incoming message down into the draw function.
-let mouseData;
+let levelData;
 
 
 function setup() {
@@ -20,7 +20,7 @@ function setup() {
     // console.log(incomingData.client);
 
     //store the incoming data in the mouseData global variable.
-    mouseData = incomingData.message
+    levelData = incomingData.message
 
   })
 
@@ -31,12 +31,12 @@ function draw(){
   background(0,10)
 
   //prevent rendering before any data has arrived. Only if somthing exists in the render variable, do the following.
-  if(mouseData){
+  if(levelData){
 
     //these keys are the same as we defined in the drawingdata object when we sent the message.
     fill(255)
     noStroke()
-    ellipse(mouseData.x,mouseData.y,100,100)
+    ellipse(x,y, levelData,levelData)
 
   }
 
