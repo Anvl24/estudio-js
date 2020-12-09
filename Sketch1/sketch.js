@@ -51,15 +51,14 @@ function draw(){
   //try moving this and the sendMessage to the draw() loop!
 
   //only send if the mouse is pressed
-  if(mouseIsPressed){
+ if(mouseClicked){
     //pack up the mouse data into JSON
-    let mouseData = {
-      "x": mouseX,
-      "y": mouseY
+   let levelData = {
+      "level*a.width/2": level,
     }
 
     //send ot to the secondsketch.js
-    sendMessage(mouseData)
+    sendMessage(levelData)
 
   }
 
